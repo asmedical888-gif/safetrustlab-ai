@@ -16,6 +16,46 @@
 <meta name="twitter:title" content="Safe Trust AI — Enterprise AI Authenticity Infrastructure">
 <meta name="twitter:description" content="Interview authenticity, deepfake detection, evidence-linked reports, and private AI deployment for enterprise workflows.">
 
+<!-- ── SOCIAL PREVIEW + ICONS ──
+     Replace these relative paths with absolute https://safetrustlab.ai/... URLs on deploy
+     so social scrapers can fetch them. -->
+<meta property="og:image" content="https://safetrustlab.ai/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://safetrustlab.ai/assets/og-image.png">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<!-- ── ORGANIZATION STRUCTURED DATA (no private personal data) ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Safe Trust AI",
+  "legalName": "SAFE FRONT, Inc.",
+  "url": "https://safetrustlab.ai",
+  "logo": "https://safetrustlab.ai/assets/favicon.svg",
+  "image": "https://safetrustlab.ai/assets/og-image.png",
+  "description": "Enterprise AI authenticity infrastructure for remote video interviews, online verification, deepfake detection, evidence-linked reporting, and private AI deployment. Operated through SAFE FRONT, Inc. in the United States and SAFE TRUST LAB AI PTE. LTD. in Singapore.",
+  "email": "contact@safetrustlab.ai",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "email": "contact@safetrustlab.ai",
+    "areaServed": ["US", "SG"]
+  },
+  "knowsAbout": ["AI authenticity", "deepfake detection", "interview authenticity", "evidence-linked reporting", "private AI deployment"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "60 Paya Lebar Road, #04-32, Paya Lebar Square",
+    "postalCode": "409051",
+    "addressLocality": "Singapore",
+    "addressCountry": "SG"
+  }
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -366,6 +406,12 @@ textarea{resize:vertical;min-height:110px}
 .form-field{margin-bottom:18px}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
 .form-success{display:none;margin-top:14px;background:#F0FDF4;border:1px solid #BBF7D0;border-radius:var(--r);padding:13px 16px;font-size:13px;color:#15803D}
+.form-error{display:none;margin-top:14px;background:var(--red-l);border:1px solid #fca5a5;border-radius:var(--r);padding:13px 16px;font-size:13px;color:#9B1C1C}
+.form-error a{color:#9B1C1C;font-weight:600}
+.legal-block{padding:22px 0;border-bottom:1px solid var(--g100)}
+.legal-block:last-of-type{border-bottom:none}
+.legal-block h3.serif{font-size:18px;margin-bottom:10px;color:var(--g900)}
+.legal-block .body{line-height:1.7}
 .contact-info{padding-top:4px;display:flex;flex-direction:column;gap:22px}
 .ci{display:flex;gap:16px;align-items:flex-start}
 .ci-icon{width:44px;height:44px;border-radius:12px;background:var(--blue-l);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
@@ -389,6 +435,9 @@ textarea{resize:vertical;min-height:110px}
 .fb-legal{font-size:11.5px;color:rgba(255,255,255,.25)}
 .fb-email a{font-size:13px;color:rgba(255,255,255,.38);text-decoration:none}
 .fb-email a:hover{color:#fff}
+.fb-links{display:flex;gap:18px;flex-wrap:wrap}
+.fb-links a{font-size:12.5px;color:rgba(255,255,255,.38);text-decoration:none;cursor:pointer;transition:color .2s}
+.fb-links a:hover{color:#fff}
 
 /* ── COMPANY FACTS BAR ── */
 .facts-bar{border:1px solid var(--g100);border-radius:var(--r-xl);background:var(--w);box-shadow:var(--sh);overflow:hidden;display:grid;grid-template-columns:repeat(5,1fr)}
@@ -606,6 +655,16 @@ details[open] .faq-icon{transform:rotate(45deg)}
 /* glow accents reusable */
 .glow-teal{box-shadow:0 0 0 1px rgba(95,208,219,.2),0 16px 40px rgba(15,139,108,.18)}
 
+/* ── polish: hero shield soft pulse ring ── */
+.eng-shield::before{content:'';position:absolute;inset:-10px;border-radius:14px;
+  background:radial-gradient(circle,rgba(19,181,143,.35),transparent 70%);filter:blur(6px);z-index:-1;
+  animation:ring 4.5s ease-in-out infinite}
+@keyframes ring{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:.9;transform:scale(1.08)}}
+/* polish: appliance units edge highlight + soft hover on the page */
+.app-unit{box-shadow:0 12px 22px rgba(12,35,54,.28),inset 0 1px 0 rgba(255,255,255,.12)}
+.appliance3d:hover .app-stack{transform:rotateX(56deg) rotateZ(-42deg)}
+.app-stack{transition:transform .6s var(--e)}
+
 /* ── DEMO scan card ── */
 .scan-card{background:linear-gradient(135deg,#0e2336,#13314a);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:14px;overflow:hidden}
 .scan-frame{position:relative;height:120px;border-radius:12px;overflow:hidden;
@@ -631,8 +690,9 @@ details[open] .faq-icon{transform:rotate(45deg)}
 .glass-bar .fact-v span{color:rgba(255,255,255,.55)}
 
 @media(prefers-reduced-motion:reduce){
-  .scanline,.scan-demo,.scan-chip i,.eng-video,.eng-shield,.eng-timeline,.eng-ev,.eng-pdf,.arch-pipe::after,.btn-primary:hover::before{animation:none!important}
+  .scanline,.scan-demo,.scan-chip i,.eng-video,.eng-shield,.eng-shield::before,.eng-timeline,.eng-ev,.eng-pdf,.arch-pipe::after,.btn-primary:hover::before{animation:none!important}
   .he-right,.hero3d,.iso-stage{animation:none}
+  .app-stack{transition:none}
 }
 
 /* ── RESPONSIVE ── */
@@ -922,7 +982,7 @@ details[open] .faq-icon{transform:rotate(45deg)}
       <p class="lead" style="max-width:440px;margin:0 auto 36px">Speak with our team about how Safe Trust AI can support your organisation.</p>
       <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
         <a class="btn btn-primary" onclick="go('contact')">Request Demo <span class="arr">→</span></a>
-        <a class="btn btn-outline" onclick="requestProfile()">Request Company Profile</a>
+        <a class="btn btn-outline" onclick="viewProfile()">View Company Profile</a>
       </div>
     </div>
   </div>
@@ -1585,6 +1645,7 @@ details[open] .faq-icon{transform:rotate(45deg)}
               <div class="ec-row"><div class="ec-k">Singapore Entity</div><div class="ec-v">SAFE TRUST LAB AI PTE. LTD.</div></div>
               <div class="ec-row"><div class="ec-k">Singapore UEN</div><div class="ec-v">202615952G</div></div>
               <div class="ec-row"><div class="ec-k">Singapore Incorporation</div><div class="ec-v">10 Apr 2026</div></div>
+              <div class="ec-row"><div class="ec-k">Singapore Paid-Up Capital</div><div class="ec-v">SGD 200,000</div></div>
               <div class="ec-row"><div class="ec-k">Registered Office</div><div class="ec-v">60 Paya Lebar Road, #04-32, Paya Lebar Square, Singapore 409051</div></div>
             </div>
           </div>
@@ -1597,7 +1658,7 @@ details[open] .faq-icon{transform:rotate(45deg)}
           <div class="cred-list">
             <div class="cred"><div class="cred-check">✓</div><div class="cred-text"><strong style="font-weight:500;color:var(--g900)">Product Brand:</strong> Safe Trust AI</div></div>
             <div class="cred"><div class="cred-check">✓</div><div class="cred-text"><strong style="font-weight:500;color:var(--g900)">U.S. Entity:</strong> SAFE FRONT, Inc. (Delaware C-Corp)</div></div>
-            <div class="cred"><div class="cred-check">✓</div><div class="cred-text"><strong style="font-weight:500;color:var(--g900)">Singapore Entity:</strong> SAFE TRUST LAB AI PTE. LTD. · UEN 202615952G · Incorporated 10 Apr 2026</div></div>
+            <div class="cred"><div class="cred-check">✓</div><div class="cred-text"><strong style="font-weight:500;color:var(--g900)">Singapore Entity:</strong> SAFE TRUST LAB AI PTE. LTD. · UEN 202615952G · Incorporated 10 Apr 2026 · Paid-Up Capital SGD 200,000</div></div>
             <div class="cred"><div class="cred-check">✓</div><div class="cred-text"><strong style="font-weight:500;color:var(--g900)">Business Focus:</strong> Enterprise AI security, content authenticity, software development, and AI workflow infrastructure</div></div>
           </div>
         </div>
@@ -1644,7 +1705,7 @@ details[open] .faq-icon{transform:rotate(45deg)}
     <div class="wrap" style="text-align:center">
       <h2 class="serif" style="margin-bottom:16px;max-width:520px;margin-left:auto;margin-right:auto">Looking for our <em>company profile?</em></h2>
       <p class="lead" style="max-width:440px;margin:0 auto 32px">Request a company profile and our team will follow up with entity and partnership details.</p>
-      <a class="btn btn-primary" onclick="requestProfile()">Request Company Profile <span class="arr">→</span></a>
+      <a class="btn btn-primary" onclick="viewProfile()">View Company Profile <span class="arr">→</span></a>
     </div>
   </div>
 </div>
@@ -1683,12 +1744,36 @@ details[open] .faq-icon{transform:rotate(45deg)}
             </select>
           </div>
           <div class="form-field"><label>Message</label><textarea id="f_message" placeholder="Tell us about your organisation and what you're looking to solve…"></textarea></div>
-          <button class="btn btn-secondary" style="width:100%;justify-content:center;border-radius:14px;padding:15px" onclick="submitForm()">Send Message <span class="arr">→</span></button>
-          <!-- TODO: For server-side handling, point this form at Formspree, Netlify Forms, or a Vercel serverless function.
-               The current implementation uses a mailto: fallback that opens the user's email client pre-filled.
-               No success message is shown unless the mail client is invoked. -->
-          <div class="form-success" id="formSuccess">✓ Opening your email app to send to contact@safetrustlab.ai…</div>
-          <p class="body" style="font-size:11.5px;margin-top:10px">This opens your email application addressed to contact@safetrustlab.ai with your details pre-filled.</p>
+          <button class="btn btn-secondary" style="width:100%;justify-content:center;border-radius:14px;padding:15px" onclick="submitForm()" id="sendBtn"><span id="sendLabel">Send Message</span> <span class="arr">→</span></button>
+          <!-- ════════ CONTACT FORM BACKEND ════════
+               Real backend is wired and ready. Set FORM_ENDPOINT in the page script CONFIG to go live:
+
+               OPTION A — Formspree (no server code):
+                 1. Create a form at https://formspree.io  →  get an ID like "abcdwxyz"
+                 2. Set: FORM_ENDPOINT = "https://formspree.io/f/abcdwxyz"
+                 The JS already POSTs JSON with name/email/company/topic/message and shows real success/error states.
+
+               OPTION B — Vercel serverless function + Resend:
+                 1. Add /api/contact.js (Node) that reads req.body and calls Resend:
+                      import { Resend } from 'resend';
+                      const resend = new Resend(process.env.RESEND_API_KEY);
+                      export default async function handler(req,res){
+                        if(req.method!=='POST') return res.status(405).end();
+                        const {name,email,company,topic,message}=req.body;
+                        await resend.emails.send({
+                          from:'Safe Trust AI <noreply@safetrustlab.ai>',
+                          to:'contact@safetrustlab.ai',
+                          reply_to:email,
+                          subject:`Safe Trust AI enquiry — ${topic}`,
+                          text:`Name: ${name}\nEmail: ${email}\nCompany: ${company}\nTopic: ${topic}\n\n${message}`
+                        });
+                        res.status(200).json({ok:true});
+                      }
+                 2. Set: FORM_ENDPOINT = "/api/contact"
+               If FORM_ENDPOINT stays empty, the form falls back to opening the user's email client (mailto). -->
+          <div class="form-success" id="formSuccess">✓ Message sent. We'll be in touch within one business day.</div>
+          <div class="form-error" id="formError">Something went wrong sending the form. Please email <a href="mailto:contact@safetrustlab.ai">contact@safetrustlab.ai</a> directly.</div>
+          <p class="body" style="font-size:11.5px;margin-top:10px" id="formHelp">Your message is sent to contact@safetrustlab.ai.</p>
         </div>
 
         <div class="contact-info">
@@ -1699,6 +1784,82 @@ details[open] .faq-icon{transform:rotate(45deg)}
           <div class="ci"><div class="ci-icon">🕐</div><div><div class="ci-label">Response Time</div><div class="ci-val">Within 1 business day<br>Mon – Fri · 9am – 6pm SGT</div></div></div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ PAGE: PRIVACY POLICY ════════ -->
+<div class="page" id="page-privacy">
+  <div class="sec" style="padding-top:84px">
+    <div class="wrap-sm">
+      <div class="label">Legal</div>
+      <h1 class="serif" style="font-size:clamp(30px,4.5vw,52px);margin-bottom:10px">Privacy Policy</h1>
+      <p class="body" style="margin-bottom:8px">Safe Trust AI is operated through SAFE FRONT, Inc. in the United States and SAFE TRUST LAB AI PTE. LTD. in Singapore. This policy explains, in plain terms, how we approach data in our product and on this website.</p>
+      <p class="body" style="font-size:12.5px;margin-bottom:32px">Last updated: 2026. This summary is provided for transparency and is not a statement of formal legal certification.</p>
+
+      <div class="legal-block">
+        <h3 class="serif">PDPA-aware data handling</h3>
+        <p class="body">We design our workflows for PDPA-aware data handling. References to the PDPA describe our design intent and operational practices; they are not a claim of certification or guaranteed regulatory compliance. Enterprise deployments are configured to support PDPA-aware handling appropriate to the customer's requirements.</p>
+      </div>
+      <div class="legal-block">
+        <h3 class="serif">Configurable retention</h3>
+        <p class="body">Data retention is configurable according to customer requirements and deployment model (cloud, hybrid, or private). Retention periods, storage location, and deletion schedules are set per engagement rather than assumed by default.</p>
+      </div>
+      <div class="legal-block">
+        <h3 class="serif">Uploaded media &amp; evidence handling</h3>
+        <p class="body">Uploaded interview media, keyframes, audio metadata, source records, and generated reports are handled according to the agreed retention configuration. For sensitive workflows, private and hybrid deployment options are designed to keep media and evidence under customer-controlled infrastructure.</p>
+      </div>
+      <div class="legal-block">
+        <h3 class="serif">Demo outputs are illustrative</h3>
+        <p class="body">The interactive demo on this website uses illustrative sample values to show the product workflow. Demo outputs are probabilistic risk indicators and do not represent real analysis of any uploaded file.</p>
+      </div>
+      <div class="legal-block">
+        <h3 class="serif">Human review required</h3>
+        <p class="body">Safe Trust AI produces probabilistic risk indicators and evidence-linked signals designed to support human decision-making. Outputs are not absolute determinations of authenticity and are intended to be reviewed by a human before any decision is made.</p>
+      </div>
+      <div class="legal-block">
+        <h3 class="serif">Contact</h3>
+        <p class="body">For privacy questions or data requests, contact <a href="mailto:contact@safetrustlab.ai" style="color:var(--blue);text-decoration:none">contact@safetrustlab.ai</a>. Singapore registered office: 60 Paya Lebar Road, #04-32, Paya Lebar Square, Singapore 409051.</p>
+      </div>
+      <div style="margin-top:36px"><a class="btn btn-outline" onclick="go('terms')">Read Terms of Use <span class="arr">→</span></a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ PAGE: TERMS OF USE ════════ -->
+<div class="page" id="page-terms">
+  <div class="sec" style="padding-top:84px">
+    <div class="wrap-sm">
+      <div class="label">Legal</div>
+      <h1 class="serif" style="font-size:clamp(30px,4.5vw,52px);margin-bottom:10px">Terms of Use</h1>
+      <p class="body" style="margin-bottom:8px">These terms govern use of the Safe Trust AI website and interactive demo. Safe Trust AI is operated through SAFE FRONT, Inc. in the United States and SAFE TRUST LAB AI PTE. LTD. in Singapore.</p>
+      <p class="body" style="font-size:12.5px;margin-bottom:32px">Last updated: 2026.</p>
+
+      <div class="legal-block">
+        <h3 class="serif">Informational purpose</h3>
+        <p class="body">This website and its content are provided for general information about Safe Trust AI's platform, products, and roadmap. Nothing here is a binding offer, warranty, or guarantee of any specific outcome, performance level, or availability.</p>
+      </div>
+      <div class="legal-block">
+        <h3 class="serif">Demo &amp; outputs</h3>
+        <p class="body">The interactive demo is a simulation that uses illustrative sample values. It does not analyse uploaded files and must not be relied upon for any decision. All product outputs are probabilistic risk indicators intended to support, not replace, human review.</p>
+      </div>
+      <div class="legal-block">
+        <h3 class="serif">Roadmap statements</h3>
+        <p class="body">Statements describing planned capabilities — including planned evaluation of NVIDIA GPUs, DGX Spark, RTX systems, CUDA, TensorRT-LLM, NVIDIA NIM, and NVIDIA AI Enterprise — are forward-looking and subject to change. Safe Trust AI is not an NVIDIA partner, has not received NVIDIA approval or endorsement, and is not a reseller; no hardware availability is implied.</p>
+      </div>
+      <div class="legal-block">
+        <h3 class="serif">No unsupported claims</h3>
+        <p class="body">We do not represent specific customers, revenue, accuracy, or benchmark figures on this site unless explicitly stated and substantiated. Mentions of sectors describe who the platform is designed for, not confirmed deployments.</p>
+      </div>
+      <div class="legal-block">
+        <h3 class="serif">Intellectual property</h3>
+        <p class="body">The Safe Trust AI name, content, and design are the property of their respective owners. You may not reproduce or redistribute site content without permission.</p>
+      </div>
+      <div class="legal-block">
+        <h3 class="serif">Contact</h3>
+        <p class="body">Questions about these terms: <a href="mailto:contact@safetrustlab.ai" style="color:var(--blue);text-decoration:none">contact@safetrustlab.ai</a>.</p>
+      </div>
+      <div style="margin-top:36px"><a class="btn btn-outline" onclick="go('privacy')">Read Privacy Policy <span class="arr">→</span></a></div>
     </div>
   </div>
 </div>
@@ -1731,7 +1892,7 @@ details[open] .faq-icon{transform:rotate(45deg)}
           <li><a onclick="go('about')">About</a></li>
           <li><a onclick="go('usecases')">Use Cases</a></li>
           <li><a onclick="go('technology')">Technology</a></li>
-          <li><a onclick="requestProfile()">Company Profile</a></li>
+          <li><a onclick="viewProfile()">Company Profile</a></li>
           <li><a onclick="go('contact')">Contact</a></li>
         </ul>
       </div>
@@ -1746,7 +1907,12 @@ details[open] .faq-icon{transform:rotate(45deg)}
     </div>
     <div class="footer-bottom">
       <div class="fb-legal">© 2026 Safe Trust AI. All rights reserved. · Operated through SAFE FRONT, Inc. and SAFE TRUST LAB AI PTE. LTD.</div>
-      <div class="fb-email"><a href="mailto:contact@safetrustlab.ai">contact@safetrustlab.ai</a></div>
+      <div class="fb-links">
+        <a onclick="go('privacy')">Privacy Policy</a>
+        <a onclick="go('terms')">Terms of Use</a>
+        <a onclick="viewProfile()">Company Profile</a>
+        <a href="mailto:contact@safetrustlab.ai">contact@safetrustlab.ai</a>
+      </div>
     </div>
   </div>
 </div>
@@ -1765,12 +1931,19 @@ const SITE = {
   sgEntity:'SAFE TRUST LAB AI PTE. LTD.',
   uen:'202615952G',
   sgIncorporated:'10 Apr 2026',
+  sgPaidUp:'SGD 200,000',
   sgOffice:'60 Paya Lebar Road, #04-32, Paya Lebar Square, Singapore 409051',
-  copyright:'© 2026 Safe Trust AI. All rights reserved. · Operated through SAFE FRONT, Inc. and SAFE TRUST LAB AI PTE. LTD.'
+  copyright:'© 2026 Safe Trust AI. All rights reserved. · Operated through SAFE FRONT, Inc. and SAFE TRUST LAB AI PTE. LTD.',
+  // ── CONTACT FORM BACKEND ──
+  // Leave empty ('') to use the mailto fallback. Set to a Formspree URL
+  // (https://formspree.io/f/XXXX) or your serverless route ('/api/contact') to send server-side.
+  formEndpoint:'',
+  // Print-ready company profile page (real file shipped in /assets).
+  profileUrl:'assets/SafeTrustAI-Company-Profile.html'
 };
 
 /* ── ROUTING ── */
-const PAGES=['home','products','appliance','usecases','technology','demo','about','contact'];
+const PAGES=['home','products','appliance','usecases','technology','demo','about','contact','privacy','terms'];
 const TITLES={
   home:'Safe Trust AI | Enterprise AI Authenticity & Deepfake Detection Platform',
   products:'Products — Safe Trust AI',
@@ -1779,7 +1952,9 @@ const TITLES={
   technology:'Technology — Safe Trust AI',
   demo:'Demo — Safe Trust AI',
   about:'Company — Safe Trust AI',
-  contact:'Contact — Safe Trust AI'
+  contact:'Contact — Safe Trust AI',
+  privacy:'Privacy Policy — Safe Trust AI',
+  terms:'Terms of Use — Safe Trust AI'
 };
 function go(p){
   PAGES.forEach(id=>{
@@ -1892,7 +2067,7 @@ const uz=document.getElementById('uploadZone');
 if(uz){uz.addEventListener('dragover',e=>{e.preventDefault();uz.classList.add('drag')});uz.addEventListener('dragleave',()=>uz.classList.remove('drag'));uz.addEventListener('drop',e=>{e.preventDefault();uz.classList.remove('drag');if(e.dataTransfer.files[0])handleUpload({files:e.dataTransfer.files})});}
 
 /* ── CONTACT ── */
-function submitForm(){
+function collectForm(){
   const first=(document.getElementById('f_first').value||'').trim();
   const last=(document.getElementById('f_last').value||'').trim();
   const email=(document.getElementById('f_email').value||'').trim();
@@ -1900,33 +2075,48 @@ function submitForm(){
   let topic=document.getElementById('f_topic').value;
   if(topic.indexOf('—')!==-1) topic='General enquiry';
   const message=(document.getElementById('f_message').value||'').trim();
-  const name=(first+' '+last).trim();
-  const subject='Safe Trust AI Demo Request'+(topic?(' — '+topic):'');
-  const body=
-    'Name: '+(name||'(not provided)')+'\n'+
-    'Email: '+(email||'(not provided)')+'\n'+
-    'Company: '+(company||'(not provided)')+'\n'+
-    'Topic: '+topic+'\n\n'+
-    'Message:\n'+(message||'(none)')+'\n';
-  // mailto fallback — opens the user's email client. Swap for Formspree/Netlify/serverless to send server-side.
+  return {name:(first+' '+last).trim(),email,company,topic,message};
+}
+function setFormStatus(state){ // 'success' | 'error' | 'reset'
+  document.getElementById('formSuccess').style.display = state==='success'?'block':'none';
+  document.getElementById('formError').style.display   = state==='error'?'block':'none';
+}
+function submitForm(){
+  const d=collectForm();
+  setFormStatus('reset');
+  if(!d.email){ document.getElementById('f_email').focus(); return; }
+  const btn=document.getElementById('sendBtn'), label=document.getElementById('sendLabel');
+
+  // BACKEND PATH — Formspree URL or serverless route configured in SITE.formEndpoint.
+  if(SITE.formEndpoint){
+    label.textContent='Sending…'; btn.style.pointerEvents='none';
+    fetch(SITE.formEndpoint,{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify(d)
+    }).then(r=>{
+      if(r.ok){ setFormStatus('success'); ['f_first','f_last','f_email','f_company','f_message'].forEach(i=>document.getElementById(i).value=''); }
+      else setFormStatus('error');
+    }).catch(()=>setFormStatus('error'))
+      .finally(()=>{ label.textContent='Send Message'; btn.style.pointerEvents=''; });
+    return;
+  }
+
+  // FALLBACK PATH — no backend configured: open the user's email client (mailto).
+  const subject='Safe Trust AI enquiry — '+d.topic;
+  const body='Name: '+(d.name||'(not provided)')+'\nEmail: '+(d.email||'(not provided)')+
+    '\nCompany: '+(d.company||'(not provided)')+'\nTopic: '+d.topic+'\n\nMessage:\n'+(d.message||'(none)')+'\n';
   window.location.href='mailto:'+SITE.email+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
-  const s=document.getElementById('formSuccess');
-  s.style.display='block';
-  setTimeout(()=>s.style.display='none',6000);
+  document.getElementById('formSuccess').textContent='✓ Opening your email app to send to '+SITE.email+'…';
+  setFormStatus('success');
+  setTimeout(()=>setFormStatus('reset'),6000);
 }
 
-/* Company Profile request — routes to Contact with the topic preselected. */
-function requestProfile(){
-  go('contact');
-  setTimeout(()=>{
-    const sel=document.getElementById('f_topic');
-    if(sel){
-      for(let i=0;i<sel.options.length;i++){
-        if(sel.options[i].value==='Company Profile Request'){sel.selectedIndex=i;break;}
-      }
-    }
-  },120);
-}
+/* Company Profile — opens the print-ready profile page in a new tab. */
+function viewProfile(){ window.open(SITE.profileUrl,'_blank','noopener'); }
+
+/* Legacy helper kept for any existing handlers — now opens the profile. */
+function requestProfile(){ viewProfile(); }
 
 /* ── MOBILE MENU ── */
 function openMenu(){document.getElementById('mmenu').classList.add('on')}
